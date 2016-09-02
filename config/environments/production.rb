@@ -86,6 +86,7 @@ Rails.application.configure do
 
 
   # Sets paperclip to Upload to Amazon S3 by default
+  Paperclip::Attachment.default_options[:s3_host_name] = 's3-us-west-2.amazonaws.com'
   config.paperclip_defaults = {
   storage: :s3,
   s3_credentials: {
